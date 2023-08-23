@@ -1,13 +1,184 @@
-body {
+@import url(https://db.onlinewebfonts.com/c/f7bc9f3a43d932504a1acd84c3452ff8?family=Bigilla);
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: #242424; */
+  /* font-family: 'Monument', sans-serif; */
+  /* color: #f0f0f0; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
+
+
+
+.header{
+  width: 100%;
+  height: 100px;
+  background-color: #242424;
+  color: #f0f0f0;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.header .logo{
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: 'Monument', sans-serif;
+  /* letter-spacing: 3px; */
+}
+.menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_item{
+  margin: 0 20px;
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: 'Monument', sans-serif;
+  /* letter-spacing: 1px; */
+}
+
+.container{
+  background-color: #242424;
+  color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  flex-direction: row;
+}
+
+.content{
+  background-color: #242424;
+  color: #f0f0f0;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  height: 100vh;
+  width: 30vw;
+  /* background-color: red; */
+  
+  margin-left: 200px;
+  margin-right: 50px;
+  flex-direction: column;
+}
+.content h1{
+  font-weight: 700;
+  font-size: 50px;
+  font-family: 'Bigilla';
+  color: white;
+}
+.content h1 div{
+  overflow: hidden;
+  margin-top: -50px;
+}
+.content p{
+  font-size: 15px;
+  width: 80%;
+  margin-top: 20px;
+  /* font-family: 'Poppins'; */
+  font-family: 'Poppins', sans-serif;
+font-family: 'Work Sans', sans-serif;
+  font-weight: 200;
+  color: #f0f0f0;
+  letter-spacing: 1px;
+}
+.content button{
+  width: 150px;
+  padding: 15px 15px;
+  margin-top: 20px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  font-size: 15px;
+  border: none;
+  background-color: #0c0c0c;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.images .box1{
+  position: absolute;
+  top: 100px;
+  right: 80px;
+  background: url(images/img1.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  width: 250px;
+  border: .5px solid gray;
+  height: 350px;
+}
+.images .box2{
+  position: absolute;
+  top: 250px;
+  right: 410px;
+  background: url(images/img2.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  width: 350px;
+  border: .5px solid gray;
+  height: 450px;
+}
+.images .box3{
+  position: absolute;
+  top: 500px;
+  right: 25px;
+  background: url(images/img3.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  width: 350px;
+  border: .5px solid gray;
+  height: 220px;
+  z-index: 10;
+}
+
+.main{
+  width: 100vw;
+  height: 100vh;
+  padding-bottom: 10px;
+  background-color: #dadada;
+  color: #0c0c0c;
+}
+
+.main h1{
+  width: 100%;
+  height: calc(100vh / 4);
+  font-size: 120px;
+  /* background-color: red; */
+  text-align: end;
+  padding: 2% 5%;
+
+}
+
+.top{
+  display: flex;
+  width: 100%;
+  height: calc(100vh / 4);
+  font-size: 120px;
+}
+
+.top h3{
+  font-size: 40px;
+  text-transform: uppercase;
+  width: 50%;
+  padding: 4% 6%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 45px;
+}
+
+.top h1{
+  width: 50%;
+}
+

@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#main{
+  position: relative;
+    overflow: hidden;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  #page{
+  position: relative;
+  width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
   }
-  to {
-    transform: rotate(360deg);
+  
+  #page1{
+  position: relative;
+  width: 100vw;
+    height: 100vh;
+    background-color: indigo;
   }
-}
+  
+  #page2{
+  position: relative;
+  width: 100vw;
+    height: 100vh;
+    background-color: red;
+  }
+  
+  #page3{
+  position: relative;
+  width: 100vw;
+    height: 100vh;
+    background-color: green;
+  }
+  
+  
+  canvas{
+    position: relative;
+    z-index: 9;
+    max-width: 100vw;
+    max-height: 100vh;
+  }   
+  
+  
+  .pg1{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .square{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+  }
+  
+  .pg2{
+    background-color: aqua;
+  }
