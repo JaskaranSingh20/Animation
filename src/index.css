@@ -3,25 +3,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: #242424; */
-  /* font-family: 'Monument', sans-serif; */
-  /* color: #f0f0f0; */
 }
 
 html, body{
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+  width: 100vw;
+  overflow: hidden
 }
 
+html::-webkit-scrollbar {
+  width: 0 !important
+}
 
+/* Header.jsx CSS START */
 
 .header{
   width: 100%;
-  height: 100px;
-  background-color: #242424;
-  color: #f0f0f0;
-  /* background-color: aqua; */
+  height: 10vh;
+  background-color: #dadada;
+  color: #0c0c0c;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,7 +32,6 @@ html, body{
   font-size: 30px;
   font-weight: 800;
   font-family: 'Monument', sans-serif;
-  /* letter-spacing: 3px; */
 }
 .menu {
   height: 100%;
@@ -47,39 +45,39 @@ html, body{
   font-size: 20px;
   font-weight: lighter;
   font-family: 'Monument', sans-serif;
-  /* letter-spacing: 1px; */
 }
 
+/* Header.jsx CSS END */
+
+/* Content.jsx CSS START */
+
 .container{
-  background-color: #242424;
-  color: #f0f0f0;
+  background-color: #dadada;
+  color: #0c0c0c;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100vh;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .content{
-  background-color: #242424;
-  color: #f0f0f0;
+  background-color: #dadada;
+  color: #0c0c0c;
   display: flex;
   align-items: left;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
   width: 30vw;
-  /* background-color: red; */
-  
-  margin-left: 200px;
-  margin-right: 50px;
+  margin-left: 10vw;
+  margin-right: 2.5vw;
   flex-direction: column;
 }
 .content h1{
   font-weight: 700;
-  font-size: 50px;
+  font-size: 3vw;
   font-family: 'Bigilla';
-  color: white;
+  color: #0c0c0c;
 }
 .content h1 div{
   overflow: hidden;
@@ -87,13 +85,11 @@ html, body{
 }
 .content p{
   font-size: 15px;
-  width: 80%;
+  width: 100%;
   margin-top: 20px;
-  /* font-family: 'Poppins'; */
   font-family: 'Poppins', sans-serif;
 font-family: 'Work Sans', sans-serif;
   font-weight: 200;
-  color: #f0f0f0;
   letter-spacing: 1px;
 }
 .content button{
@@ -104,57 +100,73 @@ font-family: 'Work Sans', sans-serif;
   text-transform: capitalize;
   font-size: 15px;
   border: none;
-  background-color: #0c0c0c;
   border-radius: 30px;
+  background-color: #0c0c0c;
   color: white;
   cursor: pointer;
 }
 
+/* Content.jsx CSS END */
+
+/* Images.jsx CSS START */
+
+.images{
+  position: relative;
+  width: 50vw;
+  height: 90vh;
+}
+
 .images .box1{
   position: absolute;
-  top: 100px;
-  right: 80px;
+  top: 10vh;
+  right: 5vw;
   background: url(images/img1.jpg) no-repeat 50% 50%;
   background-size: cover;
-  width: 250px;
+  width: 18vw;
+  height: 45vh;
   border: .5px solid gray;
-  height: 350px;
 }
 .images .box2{
   position: absolute;
-  top: 250px;
-  right: 410px;
+  bottom: 7vh;
+  right: 27vw;
   background: url(images/img2.jpg) no-repeat 50% 50%;
   background-size: cover;
-  width: 350px;
+  width: 23vw;
+  height: 60vh;
   border: .5px solid gray;
-  height: 450px;
 }
 .images .box3{
   position: absolute;
-  top: 500px;
-  right: 25px;
+  bottom: 3vh;
+  right: 2vw;
   background: url(images/img3.jpg) no-repeat 50% 50%;
   background-size: cover;
-  width: 350px;
+  width: 23vw;
+  height: 27vh;
   border: .5px solid gray;
-  height: 220px;
   z-index: 10;
 }
 
+/* Images.jsx CSS END */
+
+/* Loader.jsx CSS  START */
+
 .main{
+  position: absolute;
+  top: 100;
   width: 100vw;
   height: 100vh;
   padding-bottom: 10px;
-  background-color: #dadada;
-  color: #0c0c0c;
+  background-color: #0c0c0c;
+  color: #f0f0f0;
 }
 
 .main h1{
   width: 100%;
   height: calc(100vh / 4);
-  font-size: 120px;
-  /* background-color: red; */
+  font-size: 8vw;
+  font-weight: 400;
   text-align: end;
   padding: 2% 5%;
 
@@ -164,21 +176,101 @@ font-family: 'Work Sans', sans-serif;
   display: flex;
   width: 100%;
   height: calc(100vh / 4);
-  font-size: 120px;
+  font-size: 90px;
+  white-space: nowrap;
 }
 
 .top h3{
-  font-size: 40px;
+  font-size: 2.5vw;
   text-transform: uppercase;
   width: 50%;
   padding: 4% 6%;
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1px;
-  line-height: 45px;
+  line-height: 3vw;
 }
 
 .top h1{
   width: 50%;
 }
 
+/* Loader.jsx CSS  END */
+
+
+/* Mobiles and extra small devices*/
+@media only screen and (max-width: 950px) {
+
+  body{
+    width: 100%;
+  }
+
+  .top{
+    white-space: normal;
+  }
+
+  .top h3{
+    padding: 5vh 2.5vh;
+    font-size: 5vh;
+    line-height:5.5vh;
+  }
+
+  .main h1{
+    padding: 5vh 2.5vh ;
+    font-size: 8vh
+  }
+
+  .container{
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .content{
+    height: 70vh;
+    width: 80%;
+  }
+
+  .images{
+    height: 70vh;
+    width: 100vw;
+  }
+
+  .images .box1{
+    top: -15%;
+    width: 80vw;
+    height: 25vh;
+    left: 10%;
+    object-fit: fill;
+  }
+
+  .images .box2{
+    left: 10%;
+    width: 80vw;
+    height: 25vh;
+    top: 25%;
+    object-fit: fill;
+  }
+
+  .images .box3{
+    left: 10%;
+    top: 65%;
+    width: 80vw;
+    height: 25vh;
+    object-fit: fill;
+  }
+
+}
+
+@media only screen and ( min-width: 951px){
+  html{
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  
+  .content h1{
+    font-size: 5vh;
+    line-height: 6vh;
+  }
+}

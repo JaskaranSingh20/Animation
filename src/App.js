@@ -1,7 +1,6 @@
 import { gsap , Power3} from 'gsap';
-import Header from './components/Header';
-import Content from './components/Content';
 import Loader from './components/Loader';
+import Wrapper from './components/Wrapper';
 
 function App() {
 
@@ -11,8 +10,7 @@ function App() {
   return (
     <div className='hero'>
       <Loader timeline={t1} ease={ease}/>
-    <Header timeline={t1} ease={ease}/>
-    <Content timeline={t1} ease={ease}/>
+      <Wrapper timeline={t1} ease={ease}/>
     </div>
   );
 }

@@ -8,15 +8,7 @@ function Content({timeline, ease}) {
     let btn = useRef(null);
 
     useEffect(()=>{
-
-        timeline.from([h1.children, p, btn], {
-            opacity: 0,
-            y: 100,
-            skewY: "20",
-            stagger: {
-                amount: .4
-            }
-        })
+        timeline.from([h1.children, p, btn], { opacity: 0, y: 100, skewY: "20", delay: -1.5, stagger: { amount: .4 }})
     }, [])
 
   return (

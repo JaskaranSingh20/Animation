@@ -1,5 +1,6 @@
 import React, { useEffect, useRef} from 'react'
 import SplitType from 'split-type'
+import { gsap } from 'gsap';
 
 function Loader({timeline, ease}) {
 
@@ -8,19 +9,6 @@ function Loader({timeline, ease}) {
     let sh1 = useRef(null);
     let th1 = useRef(null);
     let fth1 = useRef(null);
-
-    // useEffect(()=>{
-    //     timeline.to(fth1, {
-    //         onStart: function(){
-    //             $(fth1).textillate({
-    //                 in: { effect: 'fadeInUp' ,
-    //                     callback:  function(){$(fth1).textillate('out')} }
-    //                 ,
-    //                 out: {effect: 'fadeOutUp'}
-    //               });
-    //         }
-    //     })
-    // }, [])
 
     useEffect(()=>{
 
@@ -33,69 +21,26 @@ function Loader({timeline, ease}) {
       let charth = th1.querySelectorAll(".char")
       let charsh = sh1.querySelectorAll(".char")
       let charfh = fh1.querySelectorAll(".char")
-      console.log(charFth);
-      // const text3 = new SplitType(sh1);
+      // console.log(charFth);
+     
+        timeline.from(charFth, { y: "100",stagger: { amount: .08,}, opacity: 0 })
+        .to(charFth, {y: "-125", stagger: { amount: .08,}, opacity: 0 })
 
-        timeline.from(charFth, {
-          y: "100",
-          stagger: {
-            amount: .08,
-          },
-          opacity: 0
-        }).to(charFth, {
-          y: "-125",
-          stagger: {
-            amount: .08,
-          },
-          opacity: 0
-        })
-        .from(charth, {
-          y: "100",
-          stagger: {
-            amount: .08,
-          },
-          opacity: 0
-        })
-        .to(charth, {
-          y: "-125",
-          stagger: {
-            amount: .08,
-          },
-          opacity: 0
-        })
-        .from(charsh, {
-          y: "100",
-          stagger: {
-            amount: .08,
-          },
-          opacity: 0
-        })
-        .to(charsh, {
-          y: "-125",
-          stagger: {
-            amount: .08,
-          },
-          opacity: 0
-        })
-        .from(charfh, {
-          y: "100",
-          stagger: {
-            amount: .08,
-          },
-          opacity: 0
-        })
-        .to([charfh, '.top h3'], {
-          y: "-125",
-          stagger: {
-            amount: .08,
-          },
-          opacity: 0
-        })
-        .to( load,{
-          display: "none",
-          height: 0,
-        })
-    }, [])
+        .from(charth, { y: "50",stagger: { amount: .08,},opacity: 0} )
+        .to(charth, { y: "-125",stagger: { amount: .08,},opacity: 0})
+
+        .from(charsh, { y: "50",stagger: { amount: .08 }, opacity: 0})
+        .to(charsh, { y: "-125",stagger: { amount: .08,},opacity: 0})
+
+        .from(charfh, { y: "50",stagger: { amount: .08 }, opacity: 0})
+        .to(charfh, { y: "-125",stagger: { amount: .08,},opacity: 0})
+
+        .to( load,{ display: "none", height: 0 ,color: '#dadada', duration: .5,
+           onStart: function(){
+             document.querySelector("html").style.overflowY="scroll";
+           }
+         })
+    },[])
 
   return (
     <div className='main' ref={el => load = el}>

@@ -7,15 +7,7 @@ function Images({timeline, ease}) {
     let img3 = useRef(null);
 
     useEffect(()=>{
-
-        timeline.from([img1, img2, img3], {
-            opacity: 0,
-            y: 100,
-            scale: 1.8,
-            stagger: {
-                amount: 0.4
-            }
-        })
+        timeline.from([img1, img2, img3], { opacity: 0, y: 100, delay: .4, scale: 1.8, stagger: { amount: 0.6 },})
     }, [])
 
   return (
